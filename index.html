@@ -24,14 +24,14 @@
 
   <script>
     function checkCode() {
-      const correctCode = "1234";    // ← change le code ici
+      const correctCode = "78125";    // ← change le code ici
       const input = document.getElementById("codeInput").value;
       const result = document.getElementById("result");
 
       if (input === correctCode) {
         result.innerHTML = `
           <h2>✅ OK !</h2>
-          <img src="https://via.placeholder.com/200" alt="Valid">
+          <img src="ok.png" alt="Valid">
         `;
       } else {
         result.innerHTML = "<h2>❌ Mauvais code</h2>";
