@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Code Check</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #result img {
+      max-width: 200px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Entrer le code secret :</h1>
+  <input id="codeInput" type="text" maxlength="4" placeholder="****">
+  <button onclick="checkCode()">Valider</button>
+
+  <div id="result"></div>
+
+  <script>
+    function checkCode() {
+      const correctCode = "1234";    // ← change le code ici
+      const input = document.getElementById("codeInput").value;
+      const result = document.getElementById("result");
+
+      if (input === correctCode) {
+        result.innerHTML = `
+          <h2>✅ OK !</h2>
+          <img src="https://via.placeholder.com/200" alt="Valid">
+        `;
+      } else {
+        result.innerHTML = "<h2>❌ Mauvais code</h2>";
+      }
+    }
+  </script>
+
+</body>
+</html>
